@@ -1,0 +1,43 @@
+{% extends 'warm/base.html' %}
+{% load static %}
+{% block extra-css %}
+<link rel="stylesheet" type="text/css" href="{% static 'warm/ice.css' %}">
+{% endblock %}
+
+{% block container %}
+    <h2>Introduction</h2>
+    <p>Ice caps are an important part of our planet Earth. Not only do they make up their very own ecosystem, one with many fascinating and unique lifeforms, but they also play an important part
+        in moderating global climate. As you'd expect, as a consequence of rising global temperatures, the Earth's ice caps have begun melting, devastating these beautiful ecosystems.
+    </p>
+    <h2>Impacts</h2>
+    <p>
+        So why does that matter? Beyond just the tragedy of the extinction of entire ecosystems, the ice caps melting has a very important and tangible effect on us humans, even though very few of us 
+        would be directly impacted by the ice caps melting. 
+        <ul>
+            <li>Rising sea levels: One important consequence of the melting of the ice caps is rising sea levels. As you'd expect, as more and more of the ice melts, 
+            our oceans will continue to rise in sea level. Many models suggest that Florida will one day be underwater if current trends continue! </li>
+            <li>Global temperatures: The ice caps actually play an important role in regulating global temperatures. It's more than just "ice is cold." Ice caps actually reflect nearly 80% of the sunlight that 
+                hits it back into the atmosphere. As the ice caps continue to melt, more of the radiation from the Sun will be absorbed by the oceans, both devastating marine life and raising global temperatures even more.
+            </li>
+            <li>
+                Melting Permafrost: <a href="https://www.smithsonianmag.com/smart-news/ticking-timebomb-siberia-thawing-permafrost-releases-more-methane-180978381/#:~:text=In%20recent%20years%2C%20climate%20scientists,methane%20time%20bomb%E2%80%9D%20detonating%20slowly.&text=In%202020%2C%20temperatures%20in%20the%20basin%20rose%20nearly%2011%20degrees,that%20had%20been%20trapped%20inside.">Recent Articles</a>
+                have found that permafrost in the ice caps have begun to melt because of rising global temperatures. Beyond just the seemingly paradoxical nature of that statement, the melting of permafrost is incredibly scary--methane deposits and viruses
+                trapped beneath the ice will soon escape into the air, which could have devastating effects on every single living organism on Earth.
+            </li>
+        </ul>
+    </p>
+    <h2>Ice Extent</h2>
+    <p>
+        What metric should we use to track the shrinking of the ice caps? One good metric is using ice extent. Ice extent is defined as the total area covered by ice, 
+        reported in square kilometers. As ice caps continue to shrink, we expect this metric to continue going down. Below, you can see how ice extent has continued to shrink for the past few decades.
+    </p>
+    <center>
+    </p>
+    {% if graph %}
+    {{ graph|safe }}
+    <p>Data gathered from RapidAPI's Melted Ice Cap Documentation</p>
+    {% else %}
+    <p>No graph was found</p>
+    {% endif %}
+    </center>
+{% endblock %}

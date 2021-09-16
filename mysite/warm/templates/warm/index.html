@@ -1,0 +1,26 @@
+{% extends 'warm/base.html' %}
+{% load static %}
+{% block extra-css %}
+<link rel="stylesheet" type="text/css" href="{% static 'warm/index.css' %}">
+{% endblock %}
+
+{% block container %}
+    <p>Hi! Welcome to the Climate Change Tracker! This is an interactive website I built to help monitor different metrics to help you better understand what climate change is and what the dangers of our current trajectory are.
+        On this website, you'll find a lot of information about a few ways to track climate change: carbon emissions, ice extent, ocean pH, as well as simply global temperatures. 
+        But don't just look at the numbers: We're already feeling some of the impacts of climate change, and more is sure to come! Rising sea levels, the recent wildfire in California, and the devastation of certain 
+        marine ecosystems are just a few tangible impacts of climate change that you can visibly see right now, and those are impacts that aren't necessarily quantifiable with metrics like these. Below, 
+        you can see another very tangible impact of climate change: rising global temperatures. If you've noticed a recent surge in heat waves, or have generally just felt that everything is getting a little bit hotter, this is why!
+        This website is just meant as a tool to help you track where the most recent data is, as well as a quick guide on what these metrics mean and what they actually affect in the real world. 
+    </p>
+    <p>
+        Anyway, navigating to any of the tabs on the top left will let you start learning about climate change metrics! Enjoy! 
+    </p>
+    <center>
+    {% if graph %}
+    {{ graph|safe }}
+    <p>Data gathered from the Global Summary of the Year from the NOAA.</p>
+    {% else %}
+    <p>No graph was found</p>
+    {% endif %}
+    </center>
+{% endblock %}

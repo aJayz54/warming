@@ -1,0 +1,18 @@
+body {
+    padding-top: 50px;
+    background-image: url('../ocean.jpeg');
+    background-size: cover;
+  }
+.top-pad {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+
+a {
+    color:lightgreen;
+}
+
+a:hover {
+    color: white;
+}

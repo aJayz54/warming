@@ -1,0 +1,52 @@
+{% extends 'warm/base.html' %}
+{% load static %}
+{% block extra-css %}
+<link rel="stylesheet" type="text/css" href="{% static 'warm/carbon.css' %}">
+{% endblock %}
+
+
+{% block container %}
+<h2>Introduction</h2>
+<p>
+    Carbon emissions are probably the quintessential buzzword that you hear when people talk about climate change. There's a reason for that. Carbon emissions are probably one of the root causes of all of the other 
+    effects of global warming on this website. What does it actually mean? Carbon emissions (and more broadly, greenhouse gases) are emitted mostly from human activity. Obviously, the act of breathing releases carbon
+    dioxide into the air, but most emissions come from burning fossil fuels, which is necessary for electricity, heat, and transportation. Obviously, there are new alternatives that currently exist (renewables, nuclear energy, etc),
+    but fossil fuels continue to dominate our economy, and as a result, our carbon emissions continue to grow. 
+</p>
+<h2>Impacts</h2>
+<p>
+    Why do carbon emissions matter? Carbon dioxide trapped in the atmosphere absorbs and re-emits infrared light from the Sun. Compared to only fifty years ago, the Earth is heating up at almost twice the rate. This is largely due to 
+    the sudden increase in carbon concentration in the atmosphere as a result of the Industrial Revolution. Naturally, increased global temperatures have devastating effects, but here are a few important ones:  
+    <ul>
+        <li>
+            Extinction: Perhaps the biggest threat of carbon emissions is that it's almost irreversible. Carbon dioxide in the atmosphere is essentially trapped, and outside of photosynthesis and newly developing 
+            carbon negative technologies, the concentration of carbon dioxide in the air doesn't really go down. This is why scientists have been warning about a carbon threshold for the past several years: once we
+            pass a certain amount of carbon emissions, it'll be incredibly hard to reverse it in an efficient timespan, making the rising global temperatures almost an inevitable constant for a few years, even if 
+            humanity were to completely stop emitting carbon dioxide. This makes climate change an incredibly concerning issue-- it isn't something that can be fixed with a snap of a finger, but rather something
+            that governments have to start working towards right now. 
+        </li> 
+        <li>Heat waves/wildfires: Beyond the distant threat of an irrecoverable climate, rising global temperatures due to carbon emissions have had devastating effects on countries across the world. Heat waves have been 
+            felt all across the globe, and as cities and states experience new historic highs in temperature, the effects of that heat is tangibly felt, sometimes in the form of deadly wildfires. California's recent surge 
+            of wildfires is almost all due to rising global temperatures igniting dry grass-- those wildfires have destroyed ecosystems, killed humans, and even completely destroyed a small Californian town. 
+        </li>
+        <li>
+            All of the other effects on this website: Indeed, carbon emissions can be seen as a big factor in every other impact of global warming. As global temperatures rise, ice caps melt; as the conceentration of carbon 
+            in the air goes up, so too does the concentration of carbon dioxide trapped in the oceans. All the devastation to ecosystems across the globe can be understood through the lenses of carbon dioxide, making it 
+            one of the most important metrics to monitor going forward. 
+        </li>
+    </ul>
+</p>
+<h2>PPM</h2>
+<p>
+    Carbon dioxide is typically measured in ppm, or parts per million. This means that if we're dealing with 400 ppm, for every one million particles of air, there are 400 particles of carbon dioxide. While that might not mean
+    a lot to you, or seem like a lot for that matter, these particles of carbon dioxide have played a crucial role in rising global temperatures. Below is a graph of ppm of carbon dioxide in the air over the past few decades.
+</p>
+<center>
+    {% if graph %}
+    {{ graph|safe }}
+    <p>Data was gathered from the US Government's Earth System Research Laboratory</p>
+    {% else %}
+    <p>No graph was found</p>
+    {% endif %}
+</center>
+{% endblock %}

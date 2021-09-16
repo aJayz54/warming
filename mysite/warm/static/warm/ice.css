@@ -1,0 +1,15 @@
+body {
+    padding-top: 50px;
+    background-image: url('../icecaps.png')
+  }
+.top-pad {
+    padding: 40px 15px;
+    text-align: center;
+}
+a {
+    color:green;
+}
+
+a:hover {
+    color: darkgreen;
+}

@@ -1,0 +1,46 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'warm/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'warm/bootstrap.min.css' %}">
+{% block extra-css %} {% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Climate Change Tracker</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #e3f2fd;">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/warm/ice">Ice Caps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/warm/carbon">Carbon Emissions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/warm/ocean">Ocean Acidification</a>
+                    </li>                    
+                </ul>
+            </div>
+            <div class="mx-auto order-0">
+                <a class="navbar-brand mx-auto" href="#">Climate Change Tracker</a>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                   <li class="nav-item">
+                        <a class="nav-link" href="/warm">Home</a>
+                    </li> 
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="container">
+            {% block container %}{% endblock %}
+        </div>
+    </body>
+</html>

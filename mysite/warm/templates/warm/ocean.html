@@ -1,0 +1,49 @@
+{% extends 'warm/base.html' %}
+{% load static %}
+{% block extra-css %}
+<link rel="stylesheet" type="text/css" href="{% static 'warm/ocean.css' %}">
+{% endblock %}
+
+
+{% block container %}
+<h2>Introduction</h2>
+<p>
+    More than 80% of the ocean is currently unexplored and unmapped, leaving it an incredibly mysterious environment. Despite that, the ocean ecosystem plays an incredibly important part of our daily lives.
+    Even if you don't visit the beach or go surfing, oceanic ecosystems play an important part in producing oxygen in the air, or providing you that beautiful lobster for dinner. Yet, those oceanic 
+    ecosystems are now at risk of being destroyed. The reason? Ocean acidification. Ocean acidification is a much less known effect of climate change, but it is just as dangerous. Simply put, 
+    water reacts with carbon dioxide to create H2CO3, or carbonic acid. Over a third of the carbon dioxide that we emit gets trapped in the ocean, creating carbonic acid and ever so slightly 
+    acidifying the ocean. As the oceans become more acidic, oceanic ecosystems can get decimated: carbonic acid prevents the formation of calcium carbonate, devastating shell-building organisms, 
+    and the more acidic environments can destroy entire coral reef ecosystems. 
+</p>
+<h2>Impacts</h2>
+<p>
+    So why does this matter? Beyond just the devastation of entire ecosystems, ocean acidification has a few very tangible effects.
+    <ul>
+        <li>
+            Oxygen Production: The algae in the ocean are actually responsible for an incredibly significant portion of the photosynthesis on Earth. It's so important that every other 
+            breath you take is a gift from algae. Ocean acidification threatens to destroy algae groups in the ocean-- beyond just lowering the overall amount of oxygen production on Earth,
+            this will lead to a negative feedback loop, where carbon dioxide gets absorbed far less efficiently, leading to greater carbon dioxide concentrations in the air. 
+        </li>
+        <li>
+            Economic Collapse: It feels absurd to bring up economic stability in the context of global warming, but ocean acidification poses a significant threat to coastal economies 
+            all across the world. Supply chains starting with fishermen will unravel, severely crushing the economics of coastal cities and entire countries. 
+            <a href="https://www.scientificamerican.com/article/ocean-acidification-threatens-the-u-s-economy/">The effects</a> of ocean acidification are already being felt today, 
+            and as it gets progressively worse, the economic effects will only continue to go up. 
+        </li>
+    </ul>
+</p>
+<h2>pH</h2>
+<p>
+    As you would expect from chemistry class, the best metric to track ocean acidification is through pH. pH is a scale from 1-14 that measures the concentration of hydrogen ions in the ocean.
+    As a solution gets more acidic, the pH goes down. Thus, with this metric, you would expect pH to continue going down as ocean acidification continues. Below, you can see a graph of pH trends
+    in the last few decades: 
+</p>
+<center>
+    {% if graph %}
+    {{ graph|safe }}
+    <p classname = "cite">Data gathered from the European Environment Agency</p>
+    {% else %}
+    <p>No graph was found</p>
+    {% endif %}
+</center>
+{% endblock %}
